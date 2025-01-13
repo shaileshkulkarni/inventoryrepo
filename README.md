@@ -6,7 +6,7 @@ If item inventory goes down for cerntain threshold then makes order to Order ser
 https://github.com/shaileshkulkarni/inventoryrepo/blob/main/Garage%20B%20Solution.pdf provides details of the overall architecture and design.
 <br />
 
-Related Repositories
+Related Repositories <br/>
 Order Service Repository - https://github.com/shaileshkulkarni/OrderService <br/>
 Local Supplier (SupplierA) Service Repository - https://github.com/shaileshkulkarni/SupplierAService <br/>
 International Supplier (SupplierB) Service Repository - https://github.com/shaileshkulkarni/SupplierBService <br/>
