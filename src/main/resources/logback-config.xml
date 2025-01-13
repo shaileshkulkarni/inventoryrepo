@@ -1,0 +1,49 @@
+<configuration>
+
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name"/>
+
+    <!-- <include resource="org/springframework/boot/logging/logback/defaults.xml"/>-->
+    <!--<include resource="org/springframework/boot/logging/logback/console-appender.xml" />-->
+
+
+    <!--  <springProfile name="dev">
+          <root level="DEBUG">
+              <appender-ref ref="STDOUT" />
+          </root>
+      </springProfile>-->
+
+
+
+
+    <!--    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                   <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %highlight(%-5level) [%blue(%t)] %green(%logger{45}) : %msg%n%throwable</pattern>
+            </encoder>
+        </appender>-->
+
+    <!--    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>
+                    %d{dd-MM-yyyy HH:mm:ss.SSS} %green([%thread]) %clr(${PID:- }) %yellow(${APP_NAME}) %highlight(%-5level) %logger{46}.%M - %msg%n
+                </pattern>
+            </encoder>
+        </appender>-->
+
+    <import class="ch.qos.logback.core.ConsoleAppender"/>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp />
+                <loggerName />
+                <logLevel />
+                <message />
+            </providers>
+        </encoder>
+    </appender>
+
+
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
